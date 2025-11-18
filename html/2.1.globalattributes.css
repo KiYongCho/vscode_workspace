@@ -1,0 +1,11 @@
+#firstP {
+    color: blue;
+}
+
+.evenP {
+    background-color: lightgray;
+}
+
+.oddP {
+    border: 3px dashed red;
+}

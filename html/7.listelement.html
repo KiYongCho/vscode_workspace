@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listelement</title>
+    <style>
+        ul#menu {
+            list-style: none;
+        }
+        ul#menu li {
+            display: inline-block;
+            width: 100px;
+            border: 1px solid #000;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- unordered list : 순서없는 목록 -->
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+    </ul>
+
+    <!-- ordered list : 순서있는 목록 -->
+    <!--
+        type : 순서 텍스트 형태
+        start : 시작 순서 번호
+        reversed : 순서 역순
+     -->
+    <ol type="I" start="5" reversed>
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+        <li>복숭아</li>
+    </ol>
+
+    <!-- definition list : 정의 목록 = 사전 -->
+    <dl>
+        <dt>hi</dt> <!-- 용어 -->
+        <dd>가벼운 인사말</dd> <!-- 설명 -->
+        <dt>hello</dt> <!-- 용어 -->
+        <dd>정중한 인사말</dd> <!-- 설명 -->
+    </dl>
+
+    <!-- nested list : 중첩 목록 - 목록내에 목록 -->
+     <ul>
+        <li>
+            <p>과일</p>
+            <ul>
+                <li>바나나</li>
+                <li>사과</li>
+            </ul>
+        </li>
+        <li>
+            <p>동물</p>
+            <ul>
+                <li>사자</li>
+                <li>호랑이</li>
+            </ul>
+        </li>
+     </ul>
+
+     <!-- ul을 활용한 메뉴 -->
+      <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+      </ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
