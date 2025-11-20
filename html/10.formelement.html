@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formelement</title>
+    <style>
+        input {
+            display: block;
+        }
+        input[type='image'] {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--
+        form 요소 : 서버에 데이터를 전송하기 위한 컨테이너
+            action 속성 : 데이터를 전송할 URL
+            method 속성 : 요청 메소드(request method), get이 기본값
+    -->
+    <form action="10.formelement.html" method="get">
+
+        <input type="button" value="버튼">
+        <input type="checkbox" name="hobby1" value="운동"> 운동
+        <input type="checkbox" name="hobby2" value="독서"> 독서
+        <input type="checkbox" name="hobby3" value="음악감상"> 음악감상
+        <input type="color" name="color">
+        <input type="date" name="date">
+        <input type="datetime-local" name="datetime-local">
+        <input type="email" name="email">
+        <input type="file" name="file">
+        <input type="hidden" name="hidden" value="123">
+        <input type="image" name="image" src="owl.jpg">
+        <input type="month" name="month">
+        <input type="number" name="number" value="1">
+        <input type="password" name="password">
+        <input type="radio" name="radio" value="apple"> 사과
+        <input type="radio" name="radio" value="peach"> 복숭아
+        <input type="radio" name="radio" value="grape"> 포도
+        <input type="range" name="range">
+        <input type="search" name="search">
+        <input type="tel" name="tel">
+        <input type="text" name="text">
+        <input type="time" name="time">
+        <input type="url" name="url">
+        <input type="week" name="week">
+
+        <select name="select">
+            <optgroup label="과일">
+                <option value="apple">사과</option>
+                <option value="peach">복숭아</option>
+                <option value="grape">포도</option>
+            </optgroup>
+            <optgroup label="동물">
+                <option value="lion">사자</option>
+                <option value="tiger">호랑이</option>
+                <option value="deer">사슴</option>
+            </optgroup>
+        </select>
+
+        <textarea name="textarea" rows="10" cols="20">이 곳에 입력하세요!</textarea>
+
+        <fieldset>
+            <legend>인적사항</legend>
+            <p>이름 : <input type="text" name="name"></p>
+            <p>전화번호 : <input type="tel" name="tel"></p>
+        </fieldset>
+        <fieldset>
+            <legend>경력사항</legend>
+            <p>최종학력 : <input type="text" name="school"></p>
+            <p>경력연수 : <input type="number" name="careeryear"></p>
+        </fieldset>        
+
+        <input type="reset" value="초기화">
+        <input type="submit" value="전송">
+
+    </form>
+
+    <!--
+        http://127.0.0.1:5500/html/10.formelement.html?hobby1=%EC%9A%B4%EB%8F%99&hobby2=%EB%8F%85%EC%84%9C&color=%23322c58&date=2025-11-13&datetime-local=2025-11-21T12%3A42&email=realchoky%40naver.com&file=ChatGPT%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D_4_of_10.pdf&hidden=123&month=2025-03&number=5&password=1212312323&radio=peach&range=78&search=%ED%8F%B4%EB%9D%BC&tel=32894239439242394&text=sound&time=13%3A43&url=https%3A%2F%2Fcafeskthumb-phinf.pstatic.net%2FMjAyMjA5MjFfNzEg%2FMDAxNjYzNzY0MDU5NTgz.nvpQyIKMmIEmzKaxTA-9KibpRbfmtTf_UXuUXyYM0ckg.YLHh_OpoheggK9bOCEFV0dLtPvTOt1YpOf7T5Kqgmesg.JPEG%2F%25EA%25B0%2584%25EC%25A7%2580%25EB%2582%25A8.jpg%3Ftype%3Dw1080&week=2025-W48&select=lion&textarea=sdffdfsdsfsdffsdsdffdssdf&name=kiyong+cho&tel=23434324&school=234324&careeryear=234324234    
+    -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

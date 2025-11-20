@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div#wrapper {
+    width: 80%;
+    background-color: lightgray;
+}
+
+header {
+    height: 120px;
+    background-color: orange;
+}
+
+li {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+aside {
+    background-color: beige;
+}
+
+aside#left {
+    width: 11%;
+    float: left;
+}
+
+div#content {
+    width: 70%;
+    background-color: burlywood;
+    padding: 2%;
+    float: left;
+}
+
+section {
+    width: 49%;
+    background-color: cornsilk;
+}
+
+aside#right {
+    width: 11%;
+    background-color: chocolate;
+    float: left;
+}
+
+footer {
+    clear: left;
+    background-color: darkturquoise;
+}
+
+.section {
+    width: 50%;
+    float: left;
+}
