@@ -1,0 +1,40 @@
+/*
+  가상 클래스 선택자 (pseudo class selector)
+  : 요소의 상태에 따라 스타일을 적용할 때 사용
+*/
+
+a:link { font-size: 2em; color: black; } /* 방문하기 전 링크 */
+a:visited { color: red; } /* 방문한 링크 */
+a:hover { color: blue; } /* 마우스 커서가 요소 영역 위에 있는 상태 */
+a:active { color: yellow; } /* 링크를 클릭하고 있는 상태 */
+
+input:hover { border: 5px solid #ffcc00; background-color: #eee; }
+
+input[type='text']:focus { background-color: red; } /* 요소가 포커스를 받은 상태 */
+
+input[type='radio']:checked { accent-color: yellow; } /* 요소가 체크된 상태 */
+
+input[type='text']:enabled { border: 3px dotted blue; } /* 요소가 사용가능한 상태 */
+
+input[type='text']:disabled { border: 3px dotted red; } /* 요소가 사용 불가능한 상태 */
+
+ul > li:first-child { font-size: 2em; } /* ul요소의 li요소 자식 중 첫번째 */
+ul > li:last-child { font-size: 3em; } /* ul요소의 li요소 자식 중 마지막번째 */
+ul > li:nth-child(2) { font-size: 5em; } /* ul요소의 li요소 자식 중 두번째 */
+ul > li:nth-last-child(2) { color: blue; } /* ul요소의 li요소 자식 중 뒤에서 두번째 */
+ul > li:first-of-type { color: yellow; } /* ul요소의 자식 중 첫번째 li요소 */
+ul > li:last-of-type { color: cyan; } /* ul요소의 자식 중 마지막번째 li요소 */
+ul > li:nth-of-type(2) { color: red; } /* ul요소의 li자식 중 두번째 li요소 */
+ul > li:nth-last-of-type(2) { color: green; } /* ul요소의 li자식 중 뒤에서 두번째 li요소 */
+
+div:not(input) { font-style: italic; } /* div의 자손 중 input요소가 아닌 모든 요소 */
+
+/* 가상 요소 선택자 : pseudo element selector */
+
+p::first-letter { font-size: 2em; color: blue; } /* 첫번째 글자 */
+p::first-line { text-decoration: underline; } /* 첫번째 줄 */
+p::before { content: '(애국가 1절 시작)'; } /* 시작태그 뒤, 컨텐트 앞 */
+p::after { content: '(애국가 1절 끝)'; } /* 끝태그 앞, 컨텐트 뒤 */
+p::selection { background-color: yellow; } /* 선택된(드래그된) 컨텐트 */
+
+
