@@ -1,0 +1,75 @@
+body {
+    height: 2000px;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+}
+
+/* relative : 부모요소의 flow를 기준으로 */
+.relative-box {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: blue;
+}
+
+.absolute-container {
+    position: relative;
+    height: 200px;
+    background-color: #eee;
+}
+
+/* absolute
+    : 부모요소 중 static이 아닌 가장 가까운 부모를 기준으로
+       모든 부모요소가 static이면 body를 기준으로
+*/
+.absolute-box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+}
+
+/* fixed : viewport 기준으로 스크롤 여부와 상관없이 고정 */
+.fixed-box {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: yellow;
+}
+
+.sticky-container {
+    height: 600px;
+    margin-top: 40px;
+    background-color: cyan;
+    padding: 20px;
+}
+
+/* sticky : 부모영역내에서 스크롤 되다가 벽에 부딪치면 고정 */
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

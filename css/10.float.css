@@ -1,0 +1,24 @@
+img { width: 400px; }
+
+img#img1 { float: left; }
+
+img#img2 { float: right; }
+
+ul { clear: both; }
+
+ul > li {
+    float: left;
+    list-style: none;
+    width: 120px;
+    border: 1px solid orange;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+ul > li.right { float: right; }
+
+p { clear: both; }

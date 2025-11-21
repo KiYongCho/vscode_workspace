@@ -1,0 +1,17 @@
+* { padding: 0; margin: 0; }
+
+.box { width: 100px; height: 100px; position: absolute; }
+
+#container1 { position: relative; }
+
+#div1 { top: 0; left: 0; background-color: blue; }
+#div2 { top: 50px; left: 50px; background-color: yellow; }
+#div3 { top: 100px; left: 100px; background-color: red; }
+
+#container2 { position: relative; top: 300px; }
+
+#diva { top: 0; left: 0; background-color: blue; }
+#divb { top: 0; left: 100px; background-color: yellow; margin-left: 10px;}
+#divc { top: 100px; left: 0; background-color: red; margin-top: 10px;}
+#divd { top: 100px; left: 100px; background-color: green; margin-top: 10px; margin-left: 10px;}
+#dive { top: 55px; left: 55px; background-color: cyan; }

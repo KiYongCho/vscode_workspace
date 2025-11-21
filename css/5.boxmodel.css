@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; }
+
+p {
+    display: inline-block; /* inline이지만 영역을 가지는 display */
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 20px;
+}
+
+p#p1 {
+    background-color: yellow;
+    width: 200px; /* content의 넓이 */
+    height: 100px; /* content의 높이 */
+}
+
+p#p2 {
+    background-color: blue;
+    border-width: 10px;
+    border-color: green;
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+p#p3 {
+    background-color: red;
+    border-top: 5px solid orange;
+    border-right: 5px dotted cyan;
+    border-bottom: 5px dashed blue;
+    border-left: 5px double yellow;
+}
+
+p#p4 {
+    /* box-sizing: content-box; */ /* content의 width, height */
+    box-sizing: border-box;  /* content+padding+border의 width, height */
+    width: 50%;
+    height: 50%;
+    border: 10px solid red;
+}

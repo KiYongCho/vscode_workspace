@@ -1,0 +1,15 @@
+/* 글자 크기 단위 */
+body {} /* 16px이 브라우져 디폴트 */
+div { font-size: 20px; }
+p#p1 {font-size: 30px;}
+p#p2 {font-size: 2em;} /* 부모인 div가 20px이므로 2배해서 40px */
+p#p3 {font-size: 150%;} /* 부모인 div가 20px이므로 1.5배해서 30px */
+p#p4 {font-size: 2rem;} /* 루트인 body가 16px이므로 2배해서 32px */
+
+/* 색상 단위 */
+p#p1 { background-color: #ffcc00; } /* RGB를 16진수 2자리씩 표현 (00~FF)*/
+p#p1 { background-color: #fc0; } /* RGB가 같은 수로 구성되면 한개씩 표현가능 */
+p#p2 { background-color: rgb(100, 100, 100); } /* RGB를 10진수 3개로 표현 (0~255)*/
+p#p3 { background-color: rgba(50, 50, 50, 0.1); } /* rgb + alpha(투명도, 0.0~1.0) */
+p#p4 { background-color: hsl(0, 100%, 50%); } /* 원형색상각도, 채도, 명도 */
+p#p4 { background-color: hsla(0, 100%, 50%, 0.1); } /* 원형색상각도, 채도, 명도, 투명도 */

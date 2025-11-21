@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; }
+
+p#p1 {
+    font-size: 32px;
+    font-family: '돋움체', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2em;
+    letter-spacing: 1.2em;
+    text-align: center;
+}
+
+p#p2 {
+    font-size: 2em;
+    font-family: 'Malgun gothic';
+    font-style: oblique;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    text-align: right;
+}
+
+p#p3 {
+    font-size: 200%;
+    font-family: '궁서체';
+    font-weight: bolder;
+    text-align: left;
+}
+
+/* 세로 중앙에 배치하려면 height값과 line-height값을 동일하게 부여 */
+p#p4 {
+    background-color: yellow;
+    height: 200px;
+    font-size: 50px;
+    line-height: 200px;
+}
+
+p#p5 > a {
+    text-decoration: none;
+}
+
+p#p6, p#p7 {
+    width: 300px;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+p#p6 {
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+p#p7 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

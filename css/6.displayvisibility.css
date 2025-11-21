@@ -1,0 +1,26 @@
+p, li {
+    background-color: orange;
+    font-size: 2em;
+}
+
+p#p1 {
+    display: block; /* 영역을 가짐, 기본값 */
+    visibility: visible; /* 화면에 보임, 기본값 */
+    opacity: 0.5;
+}
+
+p#p2 {
+    visibility: hidden; /* 영역을 가짐, 화면에 안보임 */
+}
+
+p#p3 {
+    display: none; /* 영역 사라짐, 화면에 안보임 */
+}
+
+ul > li {
+    display: inline-block; /* inline성질과 block성질을 모두 가짐 */
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+}
