@@ -1,0 +1,37 @@
+* { margin: 0; padding:0; }
+
+body {
+    background-color: #efefef;
+}
+
+nav { margin: 10px; }
+
+ul > li {
+    list-style: none;
+    width: 100px;
+    float: left;
+    border: 1px solid #333;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+ul > li:hover {
+    background-color: black;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color font-size 1.5s;
+    animation-name: radius;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transform: scale(1.1) rotate(2deg);
+}
+
+ul::after { content:""; display: block; clear: left; }
+
+@keyframes radius {
+    from { border-radius: 0; }
+    to { border-radius: 10px; }
+}

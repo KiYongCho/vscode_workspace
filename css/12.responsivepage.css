@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #58666e;
+    -webkit-text-size-adjust: 100%; /* iphone font size 변경 방지 */
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 10px 5px; }
+
+h1 { font-size: 1.8em; }
+
+#wrap {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap { flex: 1; }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: inline-block;
+    height: 36px;
+    margin: 12px 0 12px 25px;
+}
+
+.logo > img { height: 35px; }
+
+nav { float: right; }
+
+.nav-items { margin-right: 20px; }
+
+.nav-items > li { display: inline-block; }
+
+.nav-items > li > a {
+    line-height: 60px;
+    padding: 0 30px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-items > li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.navicon {
+    cursor: pointer;
+    height: 60px;
+    padding: 28px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-user-select: none; /* chrome, safari */
+    -moz-user-select: none; /* firefox */
+    -ms-user-select: none; /* edge (IE10이상) */
+    user-select: none;
+}
+
+.navicon-bar {
+    background-color: #333;
+    display: block;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 20px;
+    height: 3px;
+}
+
+.navicon-bar::before, .navicon-bar::after {
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.navicon-bar::before { top: -7px; }
+.navicon-bar::after { top: 7px; }
+
+.nav-toggle:checked ~ .navicon > .navicon-bar::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked ~ .navicon > .navicon-bar::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.nav-toggle:checked ~ .navicon .navicon-bar {
+    background: transparent;
+}
+
+#content-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+aside {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    width: 200px;
+    padding-top: 25px;
+    background-color: #333;
+}
+
+aside > ul { width: 200px; }
+
+aside > ul > li >  a {
+    display: block;
+    color: #fff;
+    padding: 10px 0 10px 20px;
+}
+
+aside > ul > li >  a.active {
+    background-color: #4caf50;
+}
+
+aside > ul > li > a:hover:not(.active) {
+    background-color: #555;
+}
+
+aside > h1 {
+    padding: 20px 0 20px 20px;
+    color: #fff;
+}
+
+section {
+    float: right;
+    margin-left: 200px;
+}
+
+article {
+    width: 48.5%;
+    margin: 1%;
+    padding: 25px;
+    background-color: #fff;
+    float: left;
+}
+
+article:nth-of-type(2n) { margin-left: 0; }
+
+article:nth-of-type(n+3) { margin-top: 0; }
+
+footer {
+    z-index: 3000;
+    height: 72px;
+    width: 100%;
+    padding: 0 25px;
+    line-height: 60px;
+    color: #8a8c8f;
+    border-top: 1px solid #dee5e7;
+    background-color: #f2f2f2;
+}
+
+footer > p {
+    text-align: center;
+}
+
+.nav-toggle { display: none; }
+.navicon { display: none; }
+
+@media screen and (max-width: 800px) {
+    header {
+        height: 120px;
+        text-align: center;
+    }
+    nav {
+        float: none;
+        margin-right: 0;
+    }
+    #wrap {
+        margin-top: 120px;
+    }
+    aside {
+        top: 120px;
+    }
+    article {
+        width: inherit;
+        display: block;
+        margin: 10px;
+        float: none;
+    }
+    article:nth-of-type(2n) { margin: 10px; }
+    article:nth-of-type(n+2) { margin-top: 0; }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 60px;
+    }
+    .nav-items {
+        display: none;
+    }
+    .navicon {
+        display: block;
+    }
+    #wrap {
+        margin-top: 60px;
+    }
+    aside {
+        top: 60px;
+        position: static;
+        width: 100%;
+        padding: 5px 0;
+    }
+    aside > ul {
+        width: 100%;
+    }
+    aside > h1 {
+        padding: 5px 0 10px 20px; 
+        color: #fff;
+    }
+    section {
+        float: none;
+        margin-left: 0;
+    }
+    .nav-toggle:checked ~ .nav-items {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,0.05);
+    }
+    .nav-items > li {
+        display: block;
+    }
+    .nav-items > li > a {
+        line-height: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; }
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-bottom: 10px;
+    transition : all 2s;
+}
+
+div#transition1:hover {
+    border-radius: 50%;
+    background-color: blue;
+    transition-delay: 1s;
+}
+
+div#transition2:hover {
+    border-radius: 10px;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes move {
+    from { left: 0; }
+    to { left: 100px; background-color: yellow; }
+}
+
+div#animation1 {
+    position: relative;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes complex {
+    from {
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        opacity: 1.0;
+        background-color: red;
+    }
+    to {
+        left: 200px;
+        top: 100px;
+        width: 200px;
+        height: 200px;
+        opacity: 0.5;
+        background-color: blue;
+    }
+}
+
+div#animation2 {
+    position: relative;
+    animation-name: complex;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+div#transform1:hover {
+    transform: translate(10px, 50px);
+}
+
+div#transform2:hover {
+    transform: scale(0.5);
+}
+
+div#transform3:hover {
+    transform: skew(5deg, 20deg);
+}
+
+div#transform4:hover {
+    transform: rotate(360deg);
+}
