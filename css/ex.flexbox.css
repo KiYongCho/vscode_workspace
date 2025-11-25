@@ -1,0 +1,20 @@
+* { margin: 0; padding: 0; }
+
+.flex-container {
+    width: 84%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* main축을 행으로 */    
+    flex-wrap: wrap; /* 컨테이너를 벗어나면 줄바꿈 */
+    justify-content: flex-start; /* main축의 시작위치부터 배치 */
+    align-items:center; /* cross축의 중앙에 배치 */
+    align-content: flex-start; /* cross축에서 시작위치부터 배치 */
+    padding: 20px;
+    background-color: cyan;
+}
+
+.flex-item {
+    display: block;
+    width: 360px;
+    margin: 20px;
+}

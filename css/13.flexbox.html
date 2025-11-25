@@ -1,0 +1,131 @@
+<!--
+    flex-container : flexbox의 컨테이너 (아이템들을 담고 있는)
+        flex-direction : 메인축(main-axis) 설정, 아이템들이 배치될 방향
+                              메인축이 설정이 되면 90도 방향으로 크로스축(cross-axis)가 설정됨
+                              row : 아이템들을 좌에서 우로 배치
+                              row-reverse : 아이템들을 우에서 좌로 배치
+                              column : 아이템들을 상에서 하로 배치
+                              column-reverse : 아이템들을 하에서 상으로 배치
+        flex-wrap : 컨테이너의 넓이보다 아이템들의 넓이의 합이 클 경우 배치 설정
+                         한 줄에 배치할건지, 여러 줄에 배치할건지
+                         nowrap : 한 줄로 배치 (아이템들의 넓이의 합이 컨테이너의 넓이를 넘으면 아이템들의 넓이가 컨테이너에 차도록 축소됨)
+                         wrap : 여러 줄로 배치 (좌에서 우로, 상에서 하로, 아이템들의 넓이를 보장)
+                         wrap-reverse : wrap과 동일하나 좌에서 우로, 하에서 상으로 배치
+        flex-flow : flex-direction과 flex-wrap의 shorthand, 기본값을 row, nowrap
+        justify-content : 메인축을 기준으로 아이템들을 수평 정렬
+            flex-start : 기본값, 좌측을 기준으로 수평 정렬
+            flex-end : 우측을 기준으로 수평 정렬
+            center : 중앙 수평 정렬
+            space-between : 첫번째와 마지막 아이템은 양 끝에 배치하고 나머지는 균등한 간격으로 수평 정렬
+            space-around : 모든 아이템의 간격을 동일하게 수평 정렬
+        align-items : 크로스축을 기준으로 아이템들을 정렬 (정렬 기준)
+            stretch : 모든 아이템의 높이를 컨테이너의 높이에 맞춤, 기본값
+            flex-start : 모든 아이템을 수직에서 크로스스타트 기준으로 정렬, 즉 위에 붙임
+            flex-end : 모든 아이템을 수직에서 크로스엔드 기준으로 정렬, 즉 아래에 붙임
+            center : 모든 아이템을 수직에서 중앙에 정렬
+            baseline : 모든 아이템을 컨테이너의 베이스라인 기준으로 수직 정렬
+        align-content : 크로스축을 기준으로 아이템들을 수직 정렬 (정렬시 간격)
+            stretch : 모든 아이템들을 균등한 간격으로 수직 정렬
+            flex-start : 모든 아이템들을 크로스스타트 기준으로 수직 정렬
+            flex-end : 모든 아이템들을 크로스엔드 기준으로 수직 정렬
+            center : 모든 아이템들을 수직에서 중앙에 정렬
+            space-between :  첫 행과 마지막 행은 수평에서 양 끝에 정렬하고 나머지 행들은 균등한 간격으로 수직 정렬
+            space-around : 모든 아이템들을 균등한 간격으로 수직 정렬
+        
+    flex-item : flexbox에서 컨테이너에 포함된 아이템
+        order : 아이템의 배치 순서, 기본값 0
+        flex-grow : 아이템 넓이의 확대 가중치, 기본값 0
+        flex-shrink : 아이템 넓이의 축소 가중치, 기본값 1
+        flex-basis : 아이템 넓이를 px, %, em 단위로 지정, 기본값 auto
+        flex : flex-grow, flex-shrink, flex-basis의 shorthand, 기본값 0 1 auto
+        align-self : 컨테이너의 align-items보다 우선 적용되며 아이템들을 정렬, 기본값 auto
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="13.flexbox.css">
+    <script defer src="13.flexbox.js"></script>
+</head>
+<body>
+
+  <div>
+    <p>
+      <button id="reset">RESET PAGE</button>
+    </p>
+    <p id="flex-direction">[container] flex-direction&nbsp;
+      <button id="row">row</button>&nbsp;
+      <button id="row-reverse">row-reverse</button>&nbsp;
+      <button id="column">column</button>&nbsp;
+      <button id="column-reverse">column-reverse</button>&nbsp;
+    </p>
+    <p id="flex-wrap">[container] flex-wrap&nbsp;
+      <button id="nowrap">nowrap</button>&nbsp;
+      <button id="wrap">wrap</button>&nbsp;
+    </p>
+    <p id="justify-content">[container] justify-content&nbsp;
+      <button id="flex-start">flex-start</button>&nbsp;
+      <button id="flex-end">flex-end</button>&nbsp;
+      <button id="center">center</button>&nbsp;
+      <button id="space-between">space-between</button>&nbsp;
+      <button id="space-around">space-around</button>&nbsp;
+    </p>
+    <p id="align-items">[container] align-items&nbsp;
+      <button id="stretch">stretch</button>&nbsp;
+      <button id="flex-start">flex-start</button>&nbsp;
+      <button id="flex-end">flex-end</button>&nbsp;
+      <button id="center">center</button>&nbsp;
+      <button id="baseline">baseline</button>&nbsp;
+    </p>
+    <!-- flex-wrap: wrap 이어야 함 -->
+    <p id="align-content">[container] align-content&nbsp;
+      <button id="stretch">stretch</button>&nbsp;
+      <button id="flex-start">flex-start</button>&nbsp;
+      <button id="flex-end">flex-end</button>&nbsp;
+      <button id="center">center</button>&nbsp;
+      <button id="space-between">space-between</button>&nbsp;
+      <button id="space-around">space-around</button>&nbsp;
+    </p>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+    <div class="flex-item">9</div>
+    <div class="flex-item">10</div>
+    <div class="flex-item">11</div>
+    <div class="flex-item">12</div>
+  </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

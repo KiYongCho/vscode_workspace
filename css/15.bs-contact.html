@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>연락처</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 네비게이션 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="15.bs-index.html">MyPortfolio</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="15.bs-index.html">홈</a></li>
+        <li class="nav-item"><a class="nav-link" href="15.bs-project-a.html">프로젝트 A</a></li>
+        <li class="nav-item"><a class="nav-link active" href="15.bs-contact.html">연락처</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 폼 -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">연락하기</h2>
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">이름</label>
+      <input type="text" class="form-control" id="name" placeholder="이름을 입력하세요">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">이메일</label>
+      <input type="email" class="form-control" id="email" placeholder="이메일 주소">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">메시지</label>
+      <textarea class="form-control" id="message" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">보내기</button>
+  </form>
+</section>
+
+<!-- 푸터 -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 MyPortfolio. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
