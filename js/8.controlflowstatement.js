@@ -161,33 +161,6 @@ for (let i=2; i<=9; i++) {
     console.log();
 }
 
-// 실습 : 1000까지 피보나치 수열 출력
-//          1
-//          1 2
-//          1 2 3
-//          1 2 3 5
-//          1 2 3 5 8
-//          ...
-for (let i=1, stop=false; !stop; i++) {
-    let a=1, b=1;
-    let line = "";
-    for (let j=1; j<=i; j++) {
-        if (j==1) {
-            line += '1 ';
-        } else {
-            let next = a + b;            
-            if (next > 1000) {
-                stop = true;
-                break;
-            }            
-            line += next + ' ';            
-            a = b;
-            b = next;
-        }
-    }
-    if(!stop) console.log(line);
-}
-
 // while
 //   - 조건이 true인 동안 반복 수행
 //   - 무한루프에 빠지지 않도록 언젠가는 조건이 false인 경우가 있어야 함
