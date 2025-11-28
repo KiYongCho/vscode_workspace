@@ -187,7 +187,7 @@ console.log();
 // 00*****00
 // 000***000
 // 0000*0000
-
+ 
 console.log();
 
 // 10. 9by9 butterfly
