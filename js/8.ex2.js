@@ -187,6 +187,17 @@ console.log();
 // 00*****00
 // 000***000
 // 0000*0000
+const line = 9;
+const middle = (line+1)/2;
+let zeroCnt, starCnt = 0;
+for (let i=1; i<line+1; i++) {
+    zeroCnt = i<=middle ? middle-i : i-middle;
+    starCnt = i<=middle ? i*2-1 : line-(i-middle)*2;
+    for (let j=0; j<zeroCnt; j++) process.stdout.write('0');    
+    for (let j=0; j<starCnt; j++) process.stdout.write('*');
+    for (let j=0; j<zeroCnt; j++) process.stdout.write('0');    
+    console.log();
+}
  
 console.log();
 
@@ -200,7 +211,17 @@ console.log();
 // **00000**
 // *0000000*
 // 000000000
-
+const line2 = 9
+const middle2 = (line2+1) / 2;
+let starCnt2, zeroCnt2 = 0;
+for (let i=1; i<=line2; i++) {
+    starCnt2 = i<=middle2 ? i-1 : line2-i;
+    zeroCnt2 = i<=middle2 ? (middle2-i)*2+1 : (i-middle2)*2+1;
+    for (let j=0; j<starCnt2; j++) process.stdout.write('*');    
+    for (let j=0; j<zeroCnt2; j++) process.stdout.write('0');
+    for (let j=0; j<starCnt2; j++) process.stdout.write('*');    
+    console.log();    
+}
 
 
 

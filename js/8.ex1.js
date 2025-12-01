@@ -55,6 +55,7 @@ console.log(`${num} 팩토리얼 : ${result}`);
 //          1 2 3 5
 //          1 2 3 5 8
 //          ...
+const LIMIT = 1000;
 for (let i=1, stop=false; !stop; i++) {
     let a=1, b=1;
     let line = "";
@@ -63,7 +64,7 @@ for (let i=1, stop=false; !stop; i++) {
             line += '1 ';
         } else {
             let next = a + b;            
-            if (next > 1000) {
+            if (next > LIMIT) {
                 stop = true;
                 break;
             }            
