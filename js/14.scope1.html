@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope1</title>
+</head>
+<body>
+    
+    <script>
+        var v = 1; // 전역 변수
+        console.log(v); // 1
+        console.log(window.v); // 1, 웹브라우져 환경에서 모든 전역 변수는 window 전역 객체의 프라퍼티
+
+        let l = 2; // 전역 변수
+        console.log(l); // 2
+        console.log(window.l); // undefined, let이나 const로 선언한 변수는 window 전역 객체의 프라퍼티가 아님
+
+        function print() { // 전역 함수
+            console.log('print 함수 호출됨!');
+        }
+        print();
+        window.print(); // 전역 함수는 window 전역 객체의 프라퍼티
+
+        var print2 = function() {
+            console.log('print2 함수 호출됨!');
+        };
+        print2();
+        window.print2(); // print2 변수는 window 전역 객체의 프라퍼티
+
+        let print3 = function() {
+            console.log('print3 함수 호출됨!');
+        };
+        print3();
+        // window.print3(); // TypeError, print3변수는 window 전역 객체의 프라퍼티가 아님
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
