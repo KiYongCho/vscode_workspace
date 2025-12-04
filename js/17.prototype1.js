@@ -3,8 +3,8 @@
 //   - 프라퍼티와 메소드(함수를 값으로 가지는 프라퍼티)로 구성
 //   - 생성자함수는 기본적으로 prototype 프라퍼티를 가짐
 function Circle(radius) {
-    this.radius = radius; // 반지름 프라퍼티
-    this.getArea = function() { // 원의 면적 구하는 메소드 (정적 메소드)
+    this.radius = radius; // 반지름 프라퍼티 (인스턴스 프라퍼티)
+    this.getArea = function() { // 원의 면적 구하는 메소드 (인스턴스 메소드)
         return Math.PI * this.radius**2; // 원의 면적 리턴
     };
 }
