@@ -91,25 +91,6 @@ for (prop in hong) {
     console.log(prop, hong[prop]);
 }
 
-/*
-  __proto__, prototype 프라퍼티
-
-    - 모든 객체는 __proto__라는 접근자 프라퍼티를 가지고 있으며 접근자 프라퍼티를 통해서
-      prototype의 정보를 가진 [[Prototype]] 내부슬롯에 접근함, 즉, __proto__는 prototype의 참조를 가짐
-    - 객체가 가진 __proto__라는 접근자 프라퍼티를 통해서 prototype에 접근함
-    - 리터럴로 생성한 객체의 __proto__는 Object.prototype을 참조함
-    - 모든 생성자 함수는 prototype이라는 프라퍼티를 가지고 있음
-*/
-console.log(hong.__proto__ === Object.prototype) ; // true
-
-const obj = {};
-console.log(obj.__proto__ === Object.prototype); // true
-
-console.log(hong.__proto__ == obj.__proto__); // true
-
-// Object.prototype을 출력
-console.log(Object.prototype); // {}
-
 // 객체 생성시에 정의한 프라퍼티
 // own property : 객체 생성시에 사용자가 정의한(소유한) 프라퍼티
 console.log(hong.hasOwnProperty('name')); // true
