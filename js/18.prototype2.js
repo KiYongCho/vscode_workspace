@@ -75,7 +75,7 @@ function Chicken(name) {
     this.name = name;
 }
 Chicken.prototype.sound = function() {
-    console.log(this.name + '이 꼬끼오 소리를 냅니다!');
+    console.log(this.name + ' 꼬끼오 소리를 냅니다!');
 };
 
 // Duck 생성자 함수
@@ -83,7 +83,7 @@ function Duck(name) {
     this.name = name;
 }
 Duck.prototype.sound = function() {
-    console.log(this.name + '이 꽥꽥 소리를 냅니다!');
+    console.log(this.name + ' 꽥꽥 소리를 냅니다!');
 };
 
 // Chicken타입 객체 생성
@@ -106,6 +106,7 @@ madchicken.sound();
 
 // 실습 : 미친오리가 꼬끼오 소리를 내도록 해봅니다.
 //          97라인에서 변경되기전 Chicken의 프로토타입을 저장해 둠
-Duck.prototype = chickenPrototype;
+Duck.prototype = Object.create(chickenPrototype);
+Duck.prototype.constructor = Duck;
 const madduck = new Duck('미친오리');
 madduck.sound();
