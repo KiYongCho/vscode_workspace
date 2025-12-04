@@ -8,8 +8,10 @@ function Chicken() {
     this.name= '닭'; // 인스턴스 프라퍼티
 }
 
-// 실습 : Chicken이 Bird를 상속받도록
-Chicken.prototype = Bird.prototype
+// Chicken이 Bird를 상속
+// Object.create()를 통해 부모의 프로토타입을 직접 쓰지 않고 ‘위임’받는 새 객체를 생성
+Chicken.prototype = Object.create(Bird.prototype);
+Chicken.prototype.constructor = Chicken;
 
 // Chicken 타입 객체 생성
 const chicken = new Chicken();
@@ -66,9 +68,11 @@ function Horse() {
     };
 }
 
-// 상속 관계를 형성 = 프로토타입체인 형성
-Car.prototype = Vehicle.prototype;
-Horse.prototype = Vehicle.prototype;
+// Car와 Horse가 Vehicle을 상속
+Car.prototype = Object.create(Vehicle.prototype);
+Car.prototype.constructor = Car;
+Horse.prototype = Object.create(Vehicle.prototype);
+Horse.prototype.constructor = Horse;
 
 // 공통 상위인 Vehicle의 프로토타입을 확장
 Vehicle.prototype.role = function() { // 프로토타입 메소드
@@ -99,8 +103,9 @@ function Bicycle() {
     };
 };
 
-// Vehicle을 상속
-Bicycle.prototype = Vehicle.prototype;
+// Bicycle이 Vehicle을 상속
+Bicycle.prototype = Object.create(Vehicle.prototype);
+Bicycle.prototype.constructor = Bicycle;
 
 const bicycle = new Bicycle();
 bicycle.accel();
