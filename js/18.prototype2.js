@@ -4,9 +4,9 @@
 
 // Person 생성자함수
 function Person(name, age) {
-    this.name = name; // 정적프라퍼티
-    this.age = age; // 정적프라퍼티
-    this.getName = function() { // 정적메소드
+    this.name = name; // 인스턴스프라퍼티
+    this.age = age; // 인스턴스프라퍼티
+    this.getName = function() { // 인스턴스메소드
         return this.name;
     }
 }
@@ -19,11 +19,11 @@ Person.prototype.getAge = function() { // 프로토타입메소드
 // Person타입 객체 생성
 
 const person1 = new Person('홍길동', 20);
-console.log(person1.getName()); // 홍길동, 정적메소드 호출
+console.log(person1.getName()); // 홍길동, 인스턴스메소드 호출
 console.log(person1.getAge()); // 20, 프로토타입메소드 호출
 
 const person2 = new Person('강감찬', 30);
-console.log(person2.getName()); // 강감찬, 정적메소드 호출
+console.log(person2.getName()); // 강감찬, 인스턴스메소드 호출
 console.log(person2.getAge()); // 30, 프로토타입메소드 호출
 
 // 정적메소드는 생성자함수를 통해서 생성되는 객체들마다 가지는 메소드
@@ -97,7 +97,8 @@ duck1.sound();
 const chickenPrototype = Chicken.prototype;
 
 // 프로토타입 교체
-Chicken.prototype = Duck.prototype;
+Chicken.prototype = Object.create(Duck.prototype);
+Chicken.prototype.constructor = Chicken;
 
 // Chicken타입 객체 생성
 const madchicken = new Chicken('미친닭');
