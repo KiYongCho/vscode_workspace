@@ -20,9 +20,9 @@ main(func, func);
 
 // 함수의 데이터 프라퍼티
 const add = function(a, b) {
-    console.log(arguments); // [Arguments] { '0': 1, '1': 2 }, 전달받은 인자들을 가진 유사배열객체
+    console.log(arguments); // [Arguments] { '0': 1, '1': 2 }, 전달받은 인자들을 가진 유사배열객체, 화살표함수에는 없음
     console.log(arguments.length); // 2, 인자의 개수
-    console.log(arguments.callee); // [Function: add], 호출당한 함수
+    console.log(arguments.callee); // [Function: add], 호출당한 함수, 비표준
     console.log(add.caller); // [Function (anonymous)], 호출한 함수, 비표준
     console.log(add.name); // add, 함수의 이름, ES6에 추가됨
     // add함수의 __proto__ 프라퍼티는 Function 생성자함수의 prototype
