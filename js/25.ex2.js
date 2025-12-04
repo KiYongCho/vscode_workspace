@@ -74,23 +74,43 @@ const peoples = [
 ];
 
 // 1. age 오름차순 / 내림차순 정렬
+peoples.sort((a, b) => a.age - b.age);
+console.log(peoples);
+peoples.sort((a, b) => b.age - a.age);
+console.log(peoples);
 
 // 2. name 오름차순 / 내림차순 정렬
+peoples.sort((a, b) => (a.name>b.name ? 1 : -1))
+console.log(peoples);
+peoples.sort((a, b) => (a.name<b.name ? 1 : -1))
+console.log(peoples);
 
 
 const fruits = ['apple', 'banana', 'pineapple', 'pear'];
 
 // 3. 문자열 길이 오름차순 / 내림차순 정렬
+fruits.sort((a, b) => a.length - b.length);
+console.log(fruits);
+fruits.sort((a, b) => b.length - a.length);
+console.log(fruits);
 
 
 const nums = [5, 8, 3, 10, 1, 4];
 
 // 4. 짝수를 앞에, 홀수를 뒤에 정렬
+nums.sort((a, b) => {
+    if (a%2==0 && b%2!=0) return -1; // a 짝수, b 홀수, a를 앞에 정렬
+    if (a%2!=0 && b%2==0) return 1;  // a 홀수, b 짝수, b를 앞에 정렬
+    return a - b; // 둘 다 짝수이거나 둘 다 홀수인 경우 오름차순 정렬
+});
+console.log(nums);
 
 
 const nested = [[3,4], [1,2], [5,6], [0,1]];
 
 // 5. 중첩배열의 첫번째 요소 기준 오름차순 정렬
+nested.sort((a, b) => a[0] - b[0]);
+console.log(nested);
 
 
 const students = [
@@ -101,11 +121,21 @@ const students = [
 ];
 
 // 6. 점수에 대해 내림차순 정렬, 단 점수가 같으면 이름에 대해 오름차순 정렬
+students.sort((a, b) => {
+    if (a.score != b.score) return b.score - a.score; // 점수가 같지 않으면
+    return (a.name>b.name) ? 1 : -1; // 점수가 같다면 이름으로 정렬
+});
+console.log(students);
 
 
 const items = ['item20', 'item3', 'item100', 'item1'];
 
 // 7. 각 요소의 숫자 기준으로 오름차순 정렬
+items.sort((a, b) => {
+    return parseInt(a.substring(4)) - parseInt(b.substring(4));
+    // return +(a.substring(4)) - +(b.substring(4));
+});
+console.log(items);
 
 
 const objs = [
@@ -117,5 +147,12 @@ const objs = [
 ];
 
 // 8. 각 사람의 나이에 대해 내림차순 정렬, 나이가 같으면 풀네임(lname+fname)에 대해 내림차순 정렬
+objs.sort((a, b) => {
+    if (a.age != b.age) return b.age - a.age; // 나이가 같지 않으면 나이에 대해 내림차순 정렬
+    // 나이가 같으면 풀네임에 대해 내림차순 정렬
+    return a.name.lname+a.name.fname > b.name.lname+b.name.fname ? -1 : 1;
+});
+console.log(objs);
+
 
 
