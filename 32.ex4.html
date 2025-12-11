@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom ex4</title>
+    <script defer src="32.ex4.js"></script>
+    <style>
+        table { width: 800px; }
+        caption { font-size: 2em; font-weight: bold; margin-bottom: 10px; }
+        table, th, td { border: 1px solid #333; border-collapse: collapse; }
+        th, td { width: 120px; font-size: 1.2em; }
+        th { background-color: #333; color: #fff; }
+        td { text-align: center; }
+        td.score { text-align: right; padding-right: 20px; }
+        p { width: 800px; text-align: center; }
+        p.bgGray { background-color: #eee; padding: 10px 0; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>성적표</caption>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>성명</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>개인총점</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    </table>
+    <p class="bgGray">
+        성명&nbsp;<input id="name" type="text" size="10">&nbsp;&nbsp;
+        국어&nbsp;<input id="kor" type="text" size="3">&nbsp;&nbsp;
+        영어&nbsp;<input id="eng" type="text" size="3">&nbsp;&nbsp;
+        수학&nbsp;<input id="math" type="text" size="3">&nbsp;&nbsp;
+        <button id="registBtn">등록</button>
+    </p>
+    <p>
+        <button id="initBtn">데이터초기화</button>&nbsp;
+        <button id="loadBtn">데이터불러오기</button>
+        <button id="sumBtn">총점출력</button>
+        <button id="sortBtn">번호순정렬</button>
+    </p>
+</body>
+</html>
