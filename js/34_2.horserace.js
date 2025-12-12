@@ -20,9 +20,9 @@ startBtn.addEventListener('click', () => {
     if (timerId !== null) return;
     isRacing = true;
     timerId = setInterval(() => {
-        elapsedTime += 0.05;
+        elapsedTime += 0.01;
         timeEl.textContent = elapsedTime.toFixed(2) + '초';
-    }, 50);
+    }, 10);
     startBtn.disabled = true;
 });
 
