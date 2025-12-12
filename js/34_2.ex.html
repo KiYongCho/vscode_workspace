@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>말 달리자!</title>
+    <style>
+        #track { position: relative; width: 500px; height: 150px; border: 2px solid #333; background-color: cyan; }
+        #finish { position: absolute; right: 50px; top: 0; width: 1px; height: 100%; background: red; }
+        #img { position: absolute; left: 0; top: 40px; }
+    </style>
+    <script defer src="34_2.ex.js"></script>
+</head>
+<body>
+
+    <h2>말 달리자!</h2>
+
+    <p>
+        <button id="start">경주시작</button>&nbsp;<span id="time">0.00초</span>
+    </p>
+
+    <div id="track">
+        <div id="finish"></div>
+        <img id="img" src="assets/horse.gif" width="120">
+    </div>
+
+</body>
+</html>
