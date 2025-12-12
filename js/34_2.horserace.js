@@ -9,7 +9,7 @@ const img = document.querySelector('#img');
 const timeEl = document.querySelector('#time');
 const startBtn = document.querySelector('#start');
 
-const MOVING_SPEED = 10; // 말 속도 px
+const MOVING_SPEED = 10; // 말 이동 px
 let position = 0; // 말의 현재 X좌표 px
 let elapsedTime = 0; // 게임 소요 시간 ms
 let timerId = null; // setInterval
