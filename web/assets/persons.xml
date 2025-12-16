@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persons>
+    <person pid="pid1">
+        <name>홍길동</name>
+        <age>30</age>
+        <address>지구 어딘가</address>
+    </person>
+    <person pid="pid2">
+        <name>강감찬</name>
+        <age>20</age>
+        <address>우주 어딘가</address>
+    </person>
+    <person pid="pid3">
+        <name>이순신</name>
+        <age>50</age>
+        <address>외계 어딘가</address>
+    </person>    
+</persons>
