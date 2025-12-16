@@ -1,0 +1,12 @@
+<!-- persons는 1개 이상의 person을 포함 -->
+<!ELEMENT persons (person+)>
+<!-- person은 하위요소로 순서대로 name, age, adress를 가짐 -->
+<!ELEMENT person (name, age, address)>
+<!-- person은 속성으로 person들을 식별하는 pid라는 필수속성을 가짐 -->
+<!ATTLIST person
+    pid ID #REQUIRED
+>
+<!-- name, age, address는 일반텍스트데이터를 가짐 -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT address (#PCDATA)>

@@ -1,0 +1,21 @@
+persons {
+    display: block;
+    width: 600px;
+    border: 1px solid #333;
+    background-color: yellow;
+}
+
+person {
+    display: block;
+    width: 400px;
+    border: 1px solid #333;
+    margin: 20px;
+    padding: 20px;
+}
+
+person > name, person > age, person > address {
+    display: block;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
