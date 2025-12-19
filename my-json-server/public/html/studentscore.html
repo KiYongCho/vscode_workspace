@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studentsscore</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../js/studentscore.js"></script>
+    <style>
+        table, p { width: 600px; }
+        caption { font-size: 1.5em; font-weight: bold; }
+        table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 5px 10px; }
+        th { text-align: center; background-color: #eee; }
+        td { text-align: right; }
+        input[type='text'] { width: 60px; }
+        input[type='text'].score { width: 25px; }
+    </style>    
+</head>
+<body>
+    <p>
+        아이디 <input type="text">&nbsp;
+        이름 <input type="text">&nbsp;
+        국어 <input type="text" class="score">&nbsp;
+        영어 <input type="text" class="score">&nbsp;
+        수학 <input type="text" class="score">&nbsp;
+        <button id="regBtn">등록</button>
+    </p>
+    <table>
+        <caption>::: 학생성적표 :::</caption>
+        <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    </table>
+    <p><button id="getDataBtn">데이터가져오기</button></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
