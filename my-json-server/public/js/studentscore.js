@@ -16,10 +16,13 @@
 
 const ENDPOINT = 'http://localhost:7777/studentscore';
 
+let dataArr = [];
+
 // 데이터 가져오기 버튼 클릭
 $('#getDataBtn').click(e => {
+    $(e.target).prop('disabled', true);
     getData();
-})
+});
 
 // 등록 버튼 클릭
 $('#regBtn').click(e => {
@@ -41,21 +44,46 @@ $('#regBtn').click(e => {
 // 데이터 가져오기
 const getData = () => {
     axios.get(ENDPOINT)
-    .then(resp => renderTable(resp.data) );
+    .then(resp => {
+        $('#btnP').append('&nbsp;<button id="getTotalBtn" onclick="renderTotal();">과목별총점</button>');
+        dataArr = resp.data;
+        renderTable(dataArr);
+    });
 };
 
 // 테이블 렌더링
-const renderTable = arr => {
+const renderTable = () => {
     $('table thead, table tbody').innerHTML = '';
-    $('thead').html('<tr><th>아이디</th><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>');
+    $('thead').html('<tr><th>아이디</th><th>이름</th><th>국어</th><th>영어</th>'
+        + '<th>수학</th><th>총점</th><th>평균</th></tr>');
     let trs = '';
-    arr.forEach(tr => {
+    dataArr.forEach(tr => {
         trs += '<tr>';
+        let studentSum = 0;
         Object.values(tr).forEach((td, i) => {
             if (i!=2) trs += `<td>${td}</td>`;
-            else Object.values(td).forEach(td => trs += `<td>${td}</td>`);
+            else Object.values(td).forEach(td => {
+                trs += `<td>${td}</td>`;
+                studentSum += parseInt(td);
+            });
         });
+        trs += `<td>${studentSum}</td>`;
+        trs += `<td>${(studentSum/3).toFixed(2)}</td>`;        
         trs += '</tr>';
     });
     $('tbody').html(trs);
+};
+
+// 과목별총점 렌더링
+const renderTotal = () => {
+    const totalArr = [0, 0, 0];
+    dataArr.forEach(data => {
+        const scoreArr = Object.values(data.score);
+        totalArr[0] += scoreArr[0];
+        totalArr[1] += scoreArr[1];
+        totalArr[2] += scoreArr[2];
+    });
+    const tr = `<tr><td colspan="2" class="center">과목별총점</td><td>${totalArr[0]}</td>'
+        + '<td>${totalArr[1]}</td><td>${totalArr[2]}</td><td colspan="2"></td></tr>`;
+    $('tfoot').html(tr);
 };

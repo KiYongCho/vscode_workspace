@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pubdata_seoul_subway</title>
+    <script defer src="pubdata_seoul_subway.js"></script>
+    <style>
+        table, th, td { border: 1px solid #333; border-collapse: collapse; }
+        th, td { text-align: center; padding: 5px 10px; }
+        thead { background-color: #333; color: #fff; }
+    </style>
+</head>
+<body>
+    <p>
+        <button>데이터가져오기</button>
+    </p>
+    <div id="resultDiv">
+        <table>
+            <thead>
+                <tr>
+                    <th>열차도착예정시간</th>
+                    <th>종착지하철역명</th>
+                    <th>상태(도착코드)</th>
+                    <th>막차여부</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
