@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+Header {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+Nav {
+    height: 60px;
+    line-height: 60px;    
+    background-color: #ddd;
+    text-align: center;
+    font-size: 1.2em;
+}
+Nav > ul > li {
+    display: inline;
+    margin-right: 50px;
+}
+Nav > ul > li > a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#content {
+    padding: 20px;
+}
+
+Footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;       
+    position: absolute;
+    bottom: 0;
+    background-color: #eee;
+    text-align: center;
+}
