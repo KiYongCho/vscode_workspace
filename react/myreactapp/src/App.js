@@ -9,7 +9,9 @@ import './App.css';
 // import ReactUseState from './basic/7.ReactUseState';
 // import GetData from './basic/8.GetData';
 // import ReactLayout from './basic/9.ReactLayout';
-import ReactStyledComponent from './basic/10.ReactStyledComponent';
+// import ReactStyledComponent from './basic/10.ReactStyledComponent';
+// import ReactContextAPI from './basic/11.ReactContextAPI';
+import ReactReducer from './basic/12.ReactReducer';
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
    // <ReactUseState />
    // <GetData />
    // <ReactLayout />
-   <ReactStyledComponent />
+   // <ReactStyledComponent />
+   // <ReactContextAPI />
+   <ReactReducer />
   );
 }
 

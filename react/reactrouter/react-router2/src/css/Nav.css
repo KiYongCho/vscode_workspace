@@ -1,0 +1,20 @@
+#nav {
+    width: 100%;
+}
+
+#nav > ul {
+    text-align: center;    
+    list-style: none;
+    padding: 10px 0;    
+    background-color: #ddd;
+}
+
+#nav > ul > li {
+    margin-right: 40px;
+    display: inline;
+    font-size: 1.2em;
+}
+
+#nav > ul > li > a {
+    text-decoration: none;
+}
